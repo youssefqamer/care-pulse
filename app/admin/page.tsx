@@ -8,7 +8,6 @@ import { columns } from '@/components/table/columns';
 
 const Admin = async () => {
   const appointments=await getRecentAppointmentList()
-  console.log(appointments);
   
   return (
     <div className='mx-auto flex flex-col max-w-7xl space-y-14'>

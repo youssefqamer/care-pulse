@@ -8,8 +8,8 @@ const NewAppointment = async({params:{userId}}:SearchParamProps) => {
   // used for tracking the number of users that viewed a page.
 Sentry.metrics.set("user_view_new_appointment", patient.name);
   return (
-    <div className="flex h-screen max-h-screen">
-    <section className="remove-scrollbar container my-auto">
+    <div className="flex h-screen max-h-screen ">
+    <section className="remove-scrollbar container">
   <div className="sub-container max-w-[860px] flex-1 justify-between">
   <Image src='/assets/icons/logo-full.svg' height={1000} width={1000} alt="patient" className="mb-12 h-10 w-fit"/>
   <AppointmentForm 
@@ -18,7 +18,7 @@ Sentry.metrics.set("user_view_new_appointment", patient.name);
     patientId={patient.$id}
   />
   
-  <p className="copyright my-10 py-12">
+  <p className="copyright  py-4">
   © 2024 CarePulse
   </p>
 

@@ -18,7 +18,6 @@ export const columns: ColumnDef<Appointment>[] = [
       header:"Patient",
       cell: ({ row }) => {
         const appointment = row.original;
-        console.log(appointment?.patient?.name);
         
         return <p className="text-14-medium text-white">{appointment?.patient?.name}</p>;
       },

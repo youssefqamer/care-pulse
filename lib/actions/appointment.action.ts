@@ -32,55 +32,13 @@ try{
     
 }
 }
-// export const getRecentAppointmentList=async()=>{
-//     try{
-//         const appointments=await  databases.listDocuments(
-//             DATABASE_ID!,
-//             APPOINTMENT_COLLECTION_ID!,
-//             [Query.orderDesc("$createdAt")]
-//         )
-//         const initialCounts={
-//             scheduledCount:0,
-//             pendingCount:0,
-//             cancelledCount:0
-//         }
-//         const counts = (appointments.documents as Appointment[]).reduce(
-//             (acc, appointment) => {
-//               switch (appointment.status) {
-//                 case "scheduled":
-//                   acc.scheduledCount++;
-//                   break;
-//                 case "pending":
-//                   acc.pendingCount++;
-//                   break;
-//                 case "cancelled":
-//                   acc.cancelledCount++;
-//                   break;
-//               }
-//               return acc;
-//             },
-//             initialCounts
-//           );
-//           const data={
-//             totalCount:appointments.total,
-//             ...counts,
-//             documents:appointments.documents
-//           }
-//         return  parseStringify(data)
-//     }catch(err){
-//         console.log(err);
-        
-//     }
-// }
 export const getRecentAppointmentList = async () => {
   try {
     const appointments = await databases.listDocuments(
       DATABASE_ID!,
       APPOINTMENT_COLLECTION_ID!,
-      // [Query.orderDesc("$createdAt")]
-      [Query.orderAsc("$createdAt")]
+      [Query.orderDesc("$createdAt")]
     );
-    console.log(appointments.documents.length);
     
     const initialCounts = {
       scheduledCount: 0,
@@ -121,27 +79,6 @@ export const getRecentAppointmentList = async () => {
   }
 };
 
-
-
-// export const updateAppointment=async({appointmentId,userId,appointment,type}:UpdateAppointmentParams)=>{
-//   try{
-//     const updatedAppointment=await databases.updateDocument(
-//       DATABASE_ID!,
-//       APPOINTMENT_COLLECTION_ID!,
-//       appointmentId,
-//       appointment,
-
-//     )
-//     if (!updatedAppointment) {
-//       throw new Error('Appointment is not found')
-//     }
-//     revalidatePath('/admin')
-//     return parseStringify(updatedAppointment)
-//   }catch(err){
-//     console.log(err);
-    
-//   }
-// }
 export const updateAppointment = async ({
   appointmentId,
   userId,

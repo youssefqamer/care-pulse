@@ -69,14 +69,8 @@ export function DataTable<TData, TValue>({
         </TableBody>
       </Table>
       <div className='flex justify-between items-center table-actions'>
-      <Button
-          variant="ghost"
-          size="lg"
-          className="bg-red-900"
-        >
-          Delete All
-        </Button>
-      <div className="flex items-center justify-end space-x-2 py-4">
+      
+      {/* <div className="flex items-center justify-end space-x-2 py-4"> */}
         <Button
           variant="outline"
           size="sm"
@@ -108,7 +102,7 @@ export function DataTable<TData, TValue>({
        
       </div>
 
-      </div>
+      {/* </div> */}
     </div>
   )
 }

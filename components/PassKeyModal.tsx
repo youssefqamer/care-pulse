@@ -8,6 +8,7 @@ import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 import {InputOTP,InputOTPGroup,InputOTPSlot} from "@/components/ui/input-otp"
 import { decryptKey, encryptKey } from './../lib/utils';
 import { usePathname } from 'next/navigation'
+
 const PassKeyModal = () => {
     const router=useRouter()
     const [open, setOpen] = useState(false)
@@ -45,6 +46,7 @@ const PassKeyModal = () => {
             setError('Invalid passkey , please try again.')
         }
     }
+
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
     <AlertDialogContent className='shad-alert-dialog'>
@@ -64,20 +66,19 @@ const PassKeyModal = () => {
         </AlertDialogDescription>
       </AlertDialogHeader>
       <div>
-      <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS_AND_CHARS} value={passKey} onChange={(value)=>setPassKey(value)}  >
+      <InputOTP maxLength={6}  pattern={REGEXP_ONLY_DIGITS_AND_CHARS} value={passKey} onChange={(value)=>setPassKey(value)}  >
       <InputOTPGroup className='shad-otp'>
         <InputOTPSlot index={0} className='shad-otp-slot' />
-        <InputOTPSlot index={1} className='shad-otp-slot' />
-        <InputOTPSlot index={2} className='shad-otp-slot' />
-        <InputOTPSlot index={3} className='shad-otp-slot' />
-        <InputOTPSlot index={4} className='shad-otp-slot' />
-        <InputOTPSlot index={5} className='shad-otp-slot' />
+        <InputOTPSlot index={1} className='shad-otp-slot'/>
+        <InputOTPSlot index={2} className='shad-otp-slot'/>
+        <InputOTPSlot index={3} className='shad-otp-slot'/>
+        <InputOTPSlot index={4} className='shad-otp-slot'/>
+        <InputOTPSlot index={5} className='shad-otp-slot'/>
       </InputOTPGroup>
     </InputOTP>
     {error&&<p className='shad-error text-14-regular mt-4 flex justify-center'>{error}</p>}
       </div>
       <AlertDialogFooter>
-        
         <AlertDialogAction className='shad-primary-btn w-full' onClick={(e)=>validatePassKey(e)}>Enter Admin Passkey</AlertDialogAction>
       </AlertDialogFooter>
     </AlertDialogContent>

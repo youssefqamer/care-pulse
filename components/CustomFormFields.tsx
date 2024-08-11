@@ -54,20 +54,7 @@ const {fieldType,iconAlt,iconSrc,placeholder,showTimeSelect,dateFormat,renderSke
         )
 
         case FormFiledType.SELECT:
-  //    return(
-  //   <FormControl>
-  //   <Select onValueChange={field.onChange} defaultValue={field.value}>
-  //     <FormControl>
-  //       <SelectTrigger className="shad-select-trigger">
-  //         <SelectValue placeholder={props.placeholder} />
-  //       </SelectTrigger>
-  //     </FormControl>
-  //     <SelectContent className="shad-select-content">
-  //       {props.children}
-  //     </SelectContent>
-  //   </Select>
-  // </FormControl>
-  //    )
+  
   return (
     <FormControl>
       <Select onValueChange={field.onChange} defaultValue={field.value}>

@@ -64,25 +64,13 @@ const AppointmentForm = ({userId,patientId,type,appointment,setOpen}:{userId:str
         };
 
         const appointment=await careateAppointment(appointmentData)
-        console.log(appointment);
         
         if (appointment) {
           form.reset()
           router.push(`/patients/${userId}/new-appointment/success?appointmentId=${appointment.$id}`)
         }
       }else{
-        // we will cancel the appointment
-      //   const appointmentToUpdate={
-      //     userId,
-      //     appointmentId:appointment?.$id!,
-      //     appointment:{
-      //       primaryPhysician:values?.primaryPhysician,
-      //       schedule:new Date(values?.schedule),
-      //       status:status as Status,
-      //       cancellationReason:values?.cancellationReason
-      //     },
-      //     type
-      //    
+     
       const appointmentToUpdate = {
         userId,
         appointmentId: appointment?.$id!,

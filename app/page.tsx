@@ -8,9 +8,9 @@ export default function Home({searchParams}:SearchParamProps) {
   const isAdmin=searchParams.admin==='true';
   
   return (
-    <div className="flex h-screen max-h-screen">
+    <div className="flex h-screen max-h-screen ">
       {isAdmin&&<PassKeyModal/>}
-      <section className="remove-scrollbar container my-auto">
+      <section className="remove-scrollbar container ">
     <div className="sub-container max-w-[496px]">
     <Image src='/assets/icons/logo-full.svg' height={1000} width={1000} alt="patient" className="mb-12 h-10 w-fit"/>
     <PatientFrom/>
