@@ -1,36 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+CarePulse  enables patients to easily manage their healthcare journey. With a user-friendly interface, patients can sign up, fill out a detailed form with their personal data, family history, current medication, and more. They can then select their preferred physician, choose a date and time, and receive confirmation of their reserved appointment.
+On the administrative side, authorized personnel can access a secure dashboard to manage appointments, schedule, or cancel them as needed. The platform also provides valuable insights with statistics on pending, canceled, and scheduled appointments.
+💻 Next.js: for a fast and scalable frontend 📝 Reusable form management: with 📆 date picker and 📞 country phone input using TypeScript, Zod, and React Hook Form 🎨 Tailwind: for a responsive and visually appealing design 🎨 Shcadcn: for a consistent and customizable design system 🔒 Appwrite: for seamless backend features, including database management, storage, authentication, and authorization 🚨 Sentry: for real-time ⏰ error tracking and performance monitoring.
